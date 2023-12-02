@@ -18,6 +18,7 @@ def match_number(s: str) -> str | None:
     elif s.startswith('nine'):
         return '9'
 
+
 def part_one():
     calibration_values: int = []
     with open('./inputs/1.txt') as f:
@@ -40,6 +41,7 @@ def part_one():
 
             calibration_values.append(int(number))
     print(sum(calibration_values))
+
 
 def part_two():
     calibration_values: int = []
@@ -71,6 +73,7 @@ def part_two():
 
             calibration_values.append(int(number))
     print(sum(calibration_values))
+
 
 if __name__ == '__main__':
     part_one()
