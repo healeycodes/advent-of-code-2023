@@ -61,7 +61,7 @@ def part_two():
         lines = f.readlines()
 
         # keep track of gear location to list of part numbers
-        # later, loop over and multiple the lists of length two
+        # later, loop over and multiply the lists of length two
         gears: Dict[str, List[int]] = {}
 
         # lil helper
