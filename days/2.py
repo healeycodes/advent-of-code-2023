@@ -53,7 +53,7 @@ def fewest_cubes(reveals: str):
 def part_one():
     with open('./inputs/2.txt') as f:
         game_ids: List[int] = []
-        for line in f.readlines():
+        for line in f:
             start, end = line.split(':')
 
             game_id = re.search(r'\d+', start).group(0)
@@ -64,7 +64,7 @@ def part_one():
 def part_two():
     with open('./inputs/2.txt') as f:
         cube_powers: List[int] = []
-        for line in f.readlines():
+        for line in f:
             _, end = line.split(':')
 
             min_cubes = fewest_cubes(end.split(';'))

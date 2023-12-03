@@ -22,7 +22,7 @@ def match_number(s: str) -> str | None:
 def part_one():
     calibration_values: int = []
     with open('./inputs/1.txt') as f:
-        for line in f.readlines():
+        for line in f:
             number = ''
 
             # first digit
@@ -46,7 +46,7 @@ def part_one():
 def part_two():
     calibration_values: int = []
     with open('./inputs/1.txt') as f:
-        for line in f.readlines():
+        for line in f:
             number = ''
 
             # first digit
