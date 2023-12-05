@@ -19,9 +19,9 @@ def parse_color(s: str) -> Color:
     raise Exception(f"couldn't find color: {s}")
 
 
-def possible_game(reveals: str, red_max: int, green_max: int, blue_max: int):
+def possible_game(reveals: List[str], red_max: int, green_max: int, blue_max: int):
     """
-    :reveals: e.g. `3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green`
+    :reveals: e.g. `["3 blue, 4 red", "1 red, 2 green, 6 blue", "2 green"]`
     """
     for reveal in reveals:
         for cubes in reveal.split(","):
@@ -38,9 +38,9 @@ def possible_game(reveals: str, red_max: int, green_max: int, blue_max: int):
     return True
 
 
-def fewest_cubes(reveals: str):
+def fewest_cubes(reveals: List[str]):
     """
-    :reveals: e.g. `3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green`
+    :reveals: e.g. `["3 blue, 4 red", "1 red, 2 green, 6 blue", "2 green"]`
     """
     red_max, green_max, blue_max = [0, 0, 0]
     for reveal in reveals:
